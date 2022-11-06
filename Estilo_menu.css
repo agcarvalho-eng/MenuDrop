@@ -1,24 +1,24 @@
 
-*{margin: 10; padding: 10;}
+* {margin: 10; padding: 10;}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
 }
 
-nav{
+#navegacao-principal {
     position: relative;
     font-family: monospace;
     float: left;
     width: 100%;
 }
 
-ul {
+#menu-principal {
     list-style: none;
     padding-left: 0;
 }
 
-li {
+#menu-principal li {
     background-color: #5f9ea0;
     display: block;
     float: left;
@@ -28,12 +28,12 @@ li {
     transition-duration: 0.5s;
 }
 
-li a {
+#menu-principal li a {
     color: rgb(57, 41, 194);
     text-decoration: none;
 }
 
-li ul{
+.dropdown {
     visibility: hidden;
     opacity: 0;
     min-width: 5rem;
@@ -45,29 +45,29 @@ li ul{
     box-shadow: 0px 8px 16px 0px hsl(197, 100%, 50%);
 }
 
-li ul li{
+.dropdown li {
     clear: both;
     width: 100%;
 }
 
-ul li:hover,
-ul li:focus-within{
+#menu-principal li:hover,
+#menu-principal li:focus-within {
     background-color: aqua;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
 }
 
-a:hover{
+#menu-principal li a:hover {
     color: hwb(281 42% 6%);
 }
 
 /*Controle de exibição do Dropdown*/
 
-ul li:hover>ul,
-ul li:focus-within>ul
-ul li ul:hover,
-ul li ul:focus{
+#menu-principal li:hover>ul,
+#menu-principal li:focus-within>ul
+.dropdown ul:hover,
+.dropdown ul:focus {
     visibility: visible;
     opacity: 1;
     display: block;
