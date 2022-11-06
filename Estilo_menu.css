@@ -1,33 +1,79 @@
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    background-color: #dddddd;
-    position: fixed;
-    top: 0;
+*{margin: 10; padding: 10;}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+nav{
+    position: relative;
+    font-family: monospace;
+    float: left;
     width: 100%;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 li {
+    background-color: #5f9ea0;
+    display: block;
     float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
 li a {
-    display: block;
-    color: #00008b;
-    text-align: center;
-    padding: 14px 16px;
+    color: rgb(57, 41, 194);
     text-decoration: none;
 }
 
-li a:hover {
-    color: #00008b;
-    background-color: #7fffd4;
+li ul{
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px hsl(197, 100%, 50%);
 }
 
-article {
+li ul li{
+    clear: both;
+    width: 100%;
+}
+
+ul li:hover,
+ul li:focus-within{
+    background-color: aqua;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: hwb(281 42% 6%);
+}
+
+/*Controle de exibição do Dropdown*/
+
+ul li:hover>ul,
+ul li:focus-within>ul
+ul li ul:hover,
+ul li ul:focus{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/*article {
     padding: 16px;
     margin-top: 60px;
     height: 1500px;
